@@ -1,0 +1,3 @@
+# work with the smallest yolov8 for experimentation
+# use the detection checkpoint as pretraining
+# figure out a way to containerize the model inference
