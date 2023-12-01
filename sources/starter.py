@@ -8,6 +8,18 @@ from ultralytics import YOLO
 from typing import Tuple, List, Dict, Union, Any
 
 
+def get_device() -> torch.device:
+    """
+    Get device specs
+    :return: device
+    """
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    print(f'Using {device} device')
+    # get device specs
+    print(torch.cuda.get_device_name(0))
+    return device
+
+
 def main() -> None:
     """
     Main function
@@ -15,16 +27,14 @@ def main() -> None:
     """
 
     # Check if GPU is available
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    print(f'Using {device} device')
-    # get device specs
-    print(torch.cuda.get_device_name(0))
+    device = get_device()
 
     # test of yolo  v8
     model = YOLO('yolov8n.pt')
+    # print(model.names)
 
     # test of yolo
-    results = model(source=1, show=True, conf=0.4, save=True, stream=True)
+    results = model(source=0, show=True, conf=0.4, save=True)
 
 
 
