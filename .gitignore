@@ -166,3 +166,12 @@ runs/
 
 # check points
 *.pt
+
+# ignore wandb
+wandb/
+
+# yolo8*
+yolov8*/
+
+# ignore data
+data/
