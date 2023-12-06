@@ -1,15 +1,5 @@
 import cv2
 
-# img_path = 'C:/Users/the_3/OneDrive/Desktop/school/Fall 2023/yolo-g8/data/test_image.jpg'
-# image = cv2.imread(img_path)
-# if image is None:
-#     print("Error loading image")
-# else:
-#     cv2.imshow('Test Window', image)
-#     cv2.waitKey(0)
-#     cv2.destroyAllWindows()
-
-
 # Start the camera
 cap = cv2.VideoCapture(0)
 
